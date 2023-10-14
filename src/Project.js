@@ -234,7 +234,7 @@ const Project = () => {
             <th>Details</th>
             <th>Created By</th>
             <th>Status</th>
-            <th>Actions</th>
+            {/* <th>Actions</th> */}
           </tr>
         </thead>
         <tbody>
@@ -242,7 +242,7 @@ const Project = () => {
             <tr key={project.id}>
               <td>{project.title}</td>
               <td>{project.details}</td>
-              <td>{project.guide}</td>
+              <td>{project.students.name}</td>
               <td>{project.approval === 1 ? 'Semi-Approved' : 'Not Approved'}</td>
               <td>
                 {/* Here you can add any action buttons related to the project */}
