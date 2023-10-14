@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { history,useEffect, useState } from 'react';
 import './Project.css';
 import axios from 'axios';
 import { TARGET_URL } from './Config';
@@ -110,6 +110,12 @@ const Project = () => {
 
     fetchData();
   }, []);
+
+  const handleProfile = (srn) => {
+    history.push('/StudentDetails', { srn });
+    window.location.reload();
+  };
+  
 
 
   const handleJoinProject = () => {
@@ -232,9 +238,9 @@ const Project = () => {
           <tr>
             <th>Project Name</th>
             <th>Details</th>
-            <th>Created By</th>
+            <th>Guide</th>
             <th>Status</th>
-            {/* <th>Actions</th> */}
+            <th>Students</th>
           </tr>
         </thead>
         <tbody>
@@ -242,11 +248,19 @@ const Project = () => {
             <tr key={project.id}>
               <td>{project.title}</td>
               <td>{project.details}</td>
-              <td>{project.students.name}</td>
+              <td>{project.guide}</td>
               <td>{project.approval === 1 ? 'Semi-Approved' : 'Not Approved'}</td>
               <td>
-                {/* Here you can add any action buttons related to the project */}
+                {project.students.map((student, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleProfile(student.value)}
+                  >
+                    {student.value}
+                  </button>
+                ))}
               </td>
+
             </tr>
           ))}
         </tbody>
