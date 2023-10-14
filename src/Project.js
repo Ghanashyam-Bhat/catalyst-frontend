@@ -1,4 +1,5 @@
-import React, { history,useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
+import { useLocation, useHistory } from 'react-router-dom';
 import './Project.css';
 import axios from 'axios';
 import { TARGET_URL } from './Config';
@@ -94,7 +95,7 @@ const Project = () => {
     }
   };
   
-
+  const history= useHistory();
   useEffect(() => {
     const fetchData = async () => {
       try {
