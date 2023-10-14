@@ -24,6 +24,18 @@
   color: white;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +47,76 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.for-div2 {
+  background-color: #1d1d21;
+    border: 1px solid #ccc;
+    padding: 150px;
+   
+}
+
+.for-h1{
+  color: rgb(78, 56, 165);
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+
+.rotating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  animation: rotating 5s infinite ease-in-out;
+}
+
+.rotating-image {
+  width: 100px; /* Adjust the size of the image as needed */
+  height: 100px;
+  transform-origin: center center;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ButtonStyle {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ButtonStyle:hover {
+  background-color: #ff0000;
 }
