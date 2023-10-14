@@ -1,0 +1,124 @@
+.approval-container {
+    margin: 20px;
+  }
+  
+  .approval-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .enlarged-image-container {
+    text-align: center;
+  }
+  
+  .enlarged-image {
+    max-width: 100%;
+    max-height: 400px;
+    margin-bottom: 10px;
+  }
+  
+  .button-style {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .declaration-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .club-events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .extra-events-table,
+  .project-approvals-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .declaration-table caption,
+  .club-events-table caption,
+  .extra-events-table caption,
+  .project-approvals-table caption {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .declaration-table th,
+  .declaration-table td,
+  .club-events-table th,
+  .club-events-table td,
+  .extra-events-table th,
+  .extra-events-table td,
+  .project-approvals-table th,
+  .project-approvals-table td {
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .declaration-table th,
+  .club-events-table th,
+  .extra-events-table th,
+  .project-approvals-table th {
+    color: black;
+    background-color: #f5f5f5;
+  }
+  
+  .declaration-image {
+    max-width: 100%;
+    max-height: 100px;
+    cursor: pointer;
+  }
+  
+  .approval-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .approve-button,
+  .reject-button {
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .approve-button {
+    background-color: #28a745;
+  }
+  
+  .reject-button {
+    background-color: #dc3545;
+  }
+
+  .ButtonStyle {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ButtonStyle:hover {
+    background-color: #ff0000;
+  }
+
+  .HTWO {
+    color: #f5f5f5;
+  }
+  
+  
