@@ -1,0 +1,148 @@
+.attendance-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .attendance-table th,
+  .attendance-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .attendance-table th {
+    font-weight: bold;
+  }
+  
+  .attendance-table tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+  }
+  
+  .attendance-table tbody tr:nth-child(odd) {
+    background-color: #F5F5F5;
+  }
+  
+  .request-info-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .request-info-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .ButtonStyle {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ButtonStyle:hover {
+    background-color: #ff0000;
+  }
+  
+  .tiyar {
+    color: white;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input::placeholder {
+    color: #999999;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .filter-container {
+    margin-bottom: 20px;
+  }
+  
+  .radio-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .radio-container label {
+    margin-right: 10px;
+  }
+  
+  .filter-value-container {
+    margin-top: 10px;
+  }
+  
+  .highlight-green {
+    background-color: lightgreen;
+  }
+  
+  .highlight-red {
+    background-color: lightcoral;
+  }
+  
+  .highlighted {
+    background-color: lightgreen;
+  }
+  
+  .attendance-table tbody tr:hover {
+    background-color: lightgray;
+  }
+  
+  .highlight-green {
+    background-color: lightgreen;
+  }
+  
+  .highlight-red {
+    background-color: lightcoral;
+  }
+
+  /* DummyAttendancePage.css */
+
+.attendance-table .highlighted {
+    background-color: green;
+    color: white;
+  }
+
+.accept-all-button {
+    margin-right: 0px;
+}
+  
+  

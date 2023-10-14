@@ -1,0 +1,47 @@
+.student-details-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #1c2331;
+    color: white;
+  }
+  
+  .student-details-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .student-details-info {
+    margin-bottom: 20px;
+  }
+  
+  .student-details-info p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .student-details-value {
+    font-weight: bold;
+  }
+  
+  .student-details-events {
+    margin-bottom: 20px;
+  }
+  
+  .student-details-events h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .student-details-events-table {
+    width: 100%;
+    background-color: #253040;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .student-details-events-table td {
+    padding: 10px;
+    border-bottom: 1px solid #1c2331;
+  }
+  
+  
