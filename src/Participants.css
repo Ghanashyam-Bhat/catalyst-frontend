@@ -1,0 +1,75 @@
+/* Participants Container Styles */
+.participants-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #1c2331;
+    color: white;
+  }
+  
+  /* Participants Title Styles */
+  .participants-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Participants Table Styles */
+  .participants-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .participants-table th,
+  .participants-table td {
+    padding: 10px;
+    text-align: left;
+    color: #ffffff;
+  }
+  
+  .participants-table th {
+    background-color: #253040;
+    color: white;
+  }
+  
+  .participants-table tr:nth-child(even) {
+    background-color: #36435c;
+  }
+  
+  .participants-table tr:hover {
+    background-color: #2c384d;
+  }
+  
+  /* Button Styles */
+  .ButtonStyle {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ButtonStyle:hover {
+    background-color: #ff0000;
+  }
+  
+  /* Search Container Styles */
+  .search-container {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Bar Styles */
+  .search-bar {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .hthree {
+    color: #ffffff;
+  }
+  
