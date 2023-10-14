@@ -1,0 +1,64 @@
+/* EventDetails.css */
+
+.event-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-details-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.event-details-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.event-details-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.event-details-info p {
+  margin-bottom: 10px;
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.event-image {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.report-container {
+  margin-top: 20px;
+}
+
+.report-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.report-container p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Add any additional styles as needed */
+
+.modify-button {
+  background-color: aqua;
+}
