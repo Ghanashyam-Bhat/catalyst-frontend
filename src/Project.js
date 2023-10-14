@@ -252,12 +252,12 @@ const Project = () => {
               <td>{project.guide}</td>
               <td>{project.approval === 1 ? 'Semi-Approved' : 'Not Approved'}</td>
               <td>
-                {project.students.map((student, index) => (
+                {project.students.map((student, index,) => (
                   <button
                     key={index}
-                    onClick={() => handleProfile(student.value)}
+                    onClick={() => handleProfile(student.srn)}
                   >
-                    {student.value}
+                    {student.srn}
                   </button>
                 ))}
               </td>
