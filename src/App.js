@@ -30,9 +30,9 @@ const App = () => {
       <div>
         <Navbar />
         <div className="for-div2">
-          <h1 className="for-h1" style={{ textAlign: 'center' }}>
+          {/* <h1 className="for-h1" style={{ textAlign: 'center' }}>
             Welcome to Ed-cred
-          </h1>
+          </h1> */}
           <Switch>
             <Route exact path="/" component={Load} />
             <Route path="/Login" component={Login} />
@@ -58,7 +58,7 @@ const App = () => {
           </Switch>
         </div>
         <div className="rotating-container">
-          <img className="rotating-image" src=".\peslogo.jpeg" alt="Rotating Image" />
+          {/* <img className="rotating-image" src=".\peslogo.jpeg" alt="Rotating Image" /> */}
         </div>
         <ReloadOnBackButton />
       </div>

@@ -10,21 +10,18 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const history = useHistory();
 
-  const handleGoToNext = (who,uname) => {
+  const handleGoToNext = (who, uname) => {
     if (who === 'students') {
       history.push('/home');
       window.location.reload();
     } else if (who === 'clubs') {
-      history.push('/ClubEventList', {club : {id: uname}});
+      history.push('/ClubEventList', { club: { id: uname } });
       window.location.reload();
-
     } else if (who === 'faculties') {
       history.push('/home');
       window.location.reload();
     }
   };
-
- 
 
   const setCookie = (name, value, options = {}) => {
     Cookies.set(name, value, options);
@@ -32,30 +29,30 @@ const Login = () => {
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const jsonData = {
         id: username,
         passwd: password,
-        //type:"login"
       };
 
       const xrl = '/proxy/login';
-  
-      axios.post(TARGET_URL + xrl, jsonData, {
+
+      axios
+        .post(TARGET_URL + xrl, jsonData, {
           withCredentials: true, // Include this option to send cookies
           headers: {
             'Content-Type': 'application/json',
           },
         })
         .then((response) => {
-          console.log(document.cookie+"hi")
-          console.log(response)
+          console.log(document.cookie + 'hi');
+          console.log(response);
           console.log(response.data['sessionid']);
-          setCookie('sessionid',response.data['sessionid'],{expires:7});
+          setCookie('sessionid', response.data['sessionid'], { expires: 7 });
 
           if (response.status === 200) {
-            handleGoToNext(response.data['group'],username);
+            handleGoToNext(response.data['group'], username);
           }
         })
         .catch((error) => {
@@ -66,29 +63,40 @@ const Login = () => {
     }
   };
 
-  
   return (
     <div className="login-container">
-      <h2 className="htwo">Login</h2>
-      <form className="login-form" onSubmit={handleLoginSubmit}>
-        <input
-          type="text"
-          placeholder="Username"
-          className="input-field"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+      <div className="background-image">
+        <img
+          src="\src\logo.png"
+          alt="Logo"
+          className="small-logo"
         />
-        <input
-          type="password"
-          placeholder="Password"
-          className="input-field"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit" className="login-button">
-          Login
-        </button>
-      </form>
+        <form className="login-form" onSubmit={handleLoginSubmit}>
+          <h2 className="htwo">Sign in</h2>
+          <p> </p>
+          <input
+            type="text"
+            placeholder="Username"
+            className="input-field"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <div>
+            <p> </p>
+          </div>
+          <input
+            type="password"
+            placeholder="Password"
+            className="input-field"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <p></p>
+          <button type="submit" className="login-button">
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
