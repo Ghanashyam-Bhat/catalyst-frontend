@@ -1,0 +1,56 @@
+/* ClubLists.css */
+
+.clublists-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #1c2331;
+    color: white;
+  }
+  
+  .clublists-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .clublists-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .clublists-table th,
+  .clublists-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .clublists-table th {
+    background-color: #253040;
+    color: white;
+  }
+  
+  .clublists-table tr:nth-child(even) {
+    background-color: #36435c;
+  }
+  
+  .clublists-table tr:hover {
+    background-color: #2c384d;
+  }
+
+  .ButtonStyle {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ButtonStyle:hover {
+    background-color: #ff0000;
+  }
+  
+  
