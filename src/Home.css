@@ -1,5 +1,14 @@
-.navbar {
-    background-color: #003399;
+/* .navbar {
+    background-color: #003399; // Blue background
+    color: #ffffff; // White text color
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    animation: slideIn 1s ease;
+  } */
+
+  .navbar {
+    background-color: #003399; 
     color: #ffffff;
     display: flex;
     justify-content: flex-start;
@@ -16,7 +25,6 @@
     flex-direction: column;
     list-style: none;
     align-items: flex-start;
-
   }
 
   
@@ -55,8 +63,8 @@
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff;
-    background-color: #000000;
+    color: #ffffff; 
+    background-color: #003399;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -64,11 +72,11 @@
   }
   
   .ButtonStyle:hover {
-    background-color: #ff0000;
+    background-color: #ff0000; 
   }
   
   .ButtonStyle.dashboard {
-    background-color: #ffffff;
+    background-color: #ffffff; 
     border: none;
     padding: 10px;
     font-size: 20px;
@@ -88,7 +96,7 @@
   .menu-line {
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: #003399; 
     margin: 2px;
     transition: transform 0.3s ease;
   }
@@ -96,4 +104,3 @@
   .open {
     transform: rotate(45deg);
   }
-
