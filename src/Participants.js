@@ -12,6 +12,8 @@ const Participants = () => {
   const [participantList, setParticipantList] = useState([]);
   const [srn, setNewParticipantSRN] = useState('');
   const [showAddParticipant, setShowAddParticipant] = useState(false);
+  const [textValue, setTextValue] = useState(''); 
+  const[pos, setNewPosition]= useState('');
 
   useEffect(() => {
     if (location.state) {
@@ -75,7 +77,7 @@ const Participants = () => {
       
       const formData = new FormData();
       
-      formData.append('request', JSON.stringify({ eventid, srn, cookies:document.cookie }));
+      formData.append('request', JSON.stringify({ eventid, srn, cookies:document.cookie,pos }));
   
       axios
         .post(TARGET_URL + '/events/participant/add/', formData, {
@@ -115,6 +117,7 @@ const Participants = () => {
           <tr>
             <th>Name</th>
             <th>SRN</th>
+        
           </tr>
         </thead>
         <tbody>
@@ -144,6 +147,12 @@ const Participants = () => {
               placeholder="Participant SRN"
               value={srn}
               onChange={(e) => setNewParticipantSRN(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Participant Position"
+              value={pos}
+              onChange={(e) => setNewPosition(e.target.value)}
             />
             <button className="ButtonStyle" onClick={handleSaveParticipant}>
               Save Participant
