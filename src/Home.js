@@ -145,6 +145,19 @@ const Home = () => {
     history.push('/DummyAttendancePage')
   }
 
+  const handleleader = () => {
+    axios.post(TARGET_URL + '/events/leaderboard/', jsonData,{
+      cookies:document.cookie,
+      withCredentials: true,
+        headers: {
+          'Content-Type': 'application/json',
+        }
+
+    }).then((response) => {
+      console.log(response)
+    }
+    )
+  }
   return (
     <div>
       <nav className="navbar">
@@ -220,6 +233,10 @@ const Home = () => {
               <button onClick={handleLogout} className="ButtonStyle">
                 Logout
               </button>
+            </li>
+
+            <li>
+              <button onClick={handleleader}>leaderboard</button>
             </li>
           </ul>
         )}
