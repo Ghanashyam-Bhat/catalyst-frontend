@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { TARGET_URL } from './Config';
-
 const Home = () => {
   console.log(document.cookie);
   const history = useHistory();
@@ -144,6 +143,7 @@ const Home = () => {
   const dummyAttendanceRequest = () => {
     history.push('/DummyAttendancePage')
   }
+  const [leaderData,setLeaderData] = useState([]);
 
   const handleleader = () => {
     axios.post(TARGET_URL + '/events/leaderboard/', jsonData,{
@@ -154,10 +154,16 @@ const Home = () => {
         }
 
     }).then((response) => {
-      console.log(response)
+      setLeaderData(response.data.leaderboard);
     }
     )
   }
+  
+
+  useEffect(()=>{
+    handleleader();
+  },[])
+
   return (
     <div>
       <nav className="navbar">
@@ -166,6 +172,29 @@ const Home = () => {
           <div className={menuOpen ? 'menu-line open' : 'menu-line'}></div>
           <div className={menuOpen ? 'menu-line open' : 'menu-line'}></div>
         </div>
+        {!menuOpen && (
+          <div className="App">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>SRN</th>
+              </tr>
+            </thead>
+            <tbody>
+              {leaderData.map((res, index) => (
+                <tr key={index}>
+                  <td>{res.rank}</td>
+                  <td>{res.name}</td>
+                  <td>{res.srn}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        
+        )}
         {menuOpen && (
           <ul className="nav-list">
             {showEventsButton && (
@@ -233,10 +262,6 @@ const Home = () => {
               <button onClick={handleLogout} className="ButtonStyle">
                 Logout
               </button>
-            </li>
-
-            <li>
-              <button onClick={handleleader}>leaderboard</button>
             </li>
           </ul>
         )}
